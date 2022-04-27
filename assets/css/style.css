@@ -1,4 +1,5 @@
-* {
+*, *:before, *:after {
+    box-sizing: border-box;
     font-family: helvetica sans-serif;
     font-size: 12px;
     margin: 0;
@@ -6,51 +7,48 @@
     color: #33535e;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
 body {
     background-color: #efefef;
-    font-family: helvetica sans-serif;
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
 }
 
 .main-logo-title {
     font-size: 25px;
 }
 
-/* header-toolbar - topmost part of the page, before <header> */
-.wrapper-header-toolbar {
+/* TOOLBAR - topmost part of the page, before <header> */
+.wrapper-toolbar {
     padding: 5px 0;
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
 }
 
-.container-header-toolbar {
+.container-toolbar {
     margin: 0;
 }
 
-.header-toolbar {
+.toolbar {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-between;
 }
 
-.header-toolbar-left-block {
+.toolbar-left-part {
     display: flex;
-    margin: 0 12px;
 }
 
-.header-toolbar-right-block {
+.toolbar-right-part {
     display: flex;
-    margin: 0 12px;
 }
 
-.header-toolbar-blocks {
+@media screen and (max-width: 626px) {
+    .toolbar-right-part {
+        justify-content: space-between;
+        width: 100%;
+    } 
+}
+
+.toolbar-blocks {
     padding: 0 12px;
 }
 
@@ -67,12 +65,14 @@ body {
     cursor: pointer;
 }
 
+/* END OF TOOLBAR */
+
 /* header-top containers - top part of the header as opposed to the bottom part */
 
 header {
     width: 100%;
     max-width: 1500px;
-    margin: 0 auto;
+    margin: 0 auto 35px auto;
 }
 
 .container-header-top {
@@ -92,6 +92,18 @@ header {
     height: 26px;
     margin: 0;
     padding: 0;
+}
+
+.header-top-logo-container-h1 {
+    position: relative;
+}
+
+.logo-description {
+    position: absolute;
+    bottom: -80%;
+    left: -20%;
+    white-space: nowrap;
+    font-size: 16px;
 }
 
 .wrapper-header-top-searchbar-container {
@@ -251,7 +263,7 @@ header {
 }
 
 .category-item:hover {
-    box-shadow: -5px 0 11px rgba(33,33,33,.2);
+    box-shadow: -5px 0 11px #21212133;
 }
 
 .main-category-list-name-txt {
@@ -263,6 +275,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 34px;
 }
 
 .arrow-right {
@@ -289,7 +302,7 @@ header {
 .subcategory-ul-container {
     position: absolute;
     top: 0px;
-    left: 100%;
+    left: 90%;
     display: none;
     width: auto;
     background-color: #fff;
@@ -371,6 +384,7 @@ header {
 }
 
 .main-page-slider_slide img {
+    display: block;
     width: 100%;
     height: 100%;
 }
@@ -614,8 +628,9 @@ footer {
 
 .footer-spacer {
     width: 120%;
-    border: solid 1px #fff;
+    height: 1px;
     margin: 25px 0 0 -10%;
+    background-color: #fff;
 }
 
 .footer-contacts {
@@ -636,4 +651,34 @@ footer {
 
 .footer_text a:hover {
     color: #a79f07;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.ul-test333 {
+    display: flex;
+    list-style: none;
+}
+.li-test333 ~ .li-test333 {
+    background-color: #18a3dd;
+    margin-left: 30px;
+}
+
+
+
+
+@media (min-width: 400px) and (max-width: 700px) {
+    body {
+        background-color: lightpink;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 500px) {
+
+}
+
+@media (orientation: portrait), (max-width: 900px) {
+    
 }

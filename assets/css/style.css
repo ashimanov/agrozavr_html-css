@@ -43,6 +43,10 @@ body {
 
 @media screen and (max-width: 456px) {
 
+    body, footer {
+        max-width: 456px;
+    }
+
     .toolbar-right-part .toolbar-blocks:last-child {
         display: flex;
         flex-direction: column;
@@ -73,7 +77,12 @@ body {
     }
 }
 
-@media screen and (min-width: 457px) and (max-width: 626px) {
+@media (max-width: 626px) {
+
+    body, footer {
+        max-width: 626px;
+    }
+
     .toolbar-right-part {
         justify-content: space-between;
         width: 100%;
@@ -180,6 +189,13 @@ header {
     left: -20%;
     white-space: nowrap;
     font-size: 16px;
+}
+
+@media (max-width: 470px) {
+    .logo-text {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 /* SEARCHBAR */
@@ -532,7 +548,6 @@ header {
     padding: 5px 0;
     width: 100%;
     max-width: 1500px;
-    min-width: 600px;
     margin: 10px auto;
 }
 .main-page-category-title { /* h3 */
@@ -742,54 +757,6 @@ footer {
 .li-test333 ~ .li-test333 {
     background-color: #18a3dd;
     margin-left: 30px;
-}
-
-
-
-.hh1 {
-    max-width: 1500px;
-}
-
-.container-hh1 {
-    display: flex;
-}
-
-@media (max-width: 595px) {
-    .container-hh1 {
-        flex-wrap: wrap;
-    }
-}
-
-.wrapper-hh1-logo {
-}
-
-.container-hh1-logo {
-    display: flex;
-    align-items: center;
-    min-width: 220px;
-}
-
-.container-hh1-logo-img {
-}
-
-.container-hh1-logo-text {
-    position: relative;
-}
-
-.hh1-logo-text {
-    display: flex;
-}
-
-.hh1-logo-img {
-    height: 26px;
-    width: 26px;
-}
-
-.hh1-logo-description {
-    /* position: absolute;
-    bottom: -160%;
-    left: -26px; */
-    white-space: nowrap;
 }
 
 

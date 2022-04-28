@@ -11,7 +11,7 @@ body {
     background-color: #efefef;
 }
 
-.main-logo-title {
+.logo-h1 {
     font-size: 25px;
 }
 
@@ -109,7 +109,7 @@ body {
 
 /* END OF TOOLBAR */
 
-/* header-top containers - top part of the header as opposed to the bottom part */
+/* HEADER - LOGO + SEARCHBAR + REGION SELECTOR BUTTON */
 
 header {
     width: 100%;
@@ -117,26 +117,57 @@ header {
     margin: 0 auto 35px auto;
 }
 
-.container-header-top {
+.wrapper-header {
+}
+
+.container-header {
     margin: 0 10px;
     padding: 5px 5px 5px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: red;
 }
 
-.header-top-logo-container {
+@media (max-width: 595px) {
+    .wrapper-header-logo {
+        width: 100%;
+        background-color: lightblue;
+    }
+
+    .container-header {
+        flex-wrap: wrap;
+    }
+
+    .logo-text {
+        position: static;
+    }
+
+    .logo-description {
+        position: static;
+    }
+
+    .container-header-logo {
+        display: block;
+    }
+
+    .logo-description {
+        position: static;
+    }
+}
+
+.container-header-logo {
     display: flex;
     align-items: center;
 }
 
-.header-top-logo-container-logo-img img {
+.logo-img { /* SVG LOGO */
     height: 26px;
     margin: 0;
     padding: 0;
 }
 
-.header-top-logo-container-h1 {
+.logo-text {
     position: relative;
 }
 
@@ -147,6 +178,8 @@ header {
     white-space: nowrap;
     font-size: 16px;
 }
+
+/* SEARCHBAR */
 
 .wrapper-header-top-searchbar-container {
     width: 100%;

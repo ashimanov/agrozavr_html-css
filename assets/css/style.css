@@ -120,6 +120,8 @@ body {
 
 /* HEADER - LOGO + SEARCHBAR + REGION SELECTOR BUTTON */
 
+/* HEADER - LOGO */
+
 header {
     width: 100%;
     max-width: 1500px;
@@ -128,29 +130,32 @@ header {
 
 .wrapper-header {
     width: 100%;
-    background-color: red;
 }
 
 .container-header {
     width: 100%;
-    margin: 0 10px;
     padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: lightblue;
 }
 
 .wrapper-header-logo {
-    width: 100%;
+    width: 200px;
 }
 
 @media (max-width: 595px) {
     .container-header {
         flex-wrap: wrap;
     }
+
+    .wrapper-header-logo {
+        width: 100%;
+    }
+
     .container-header-logo {
         display: flex;
+        width: 100%;
     }
 
     .container-logo-text {
@@ -200,9 +205,9 @@ header {
     }
 }
 
-/* SEARCHBAR */
+/* HEADER - SEARCHBAR */
 
-.wrapper-header-top-searchbar-container {
+.wrapper-header-searchbar {
     width: 100%;
     margin: 0 10px;
 }

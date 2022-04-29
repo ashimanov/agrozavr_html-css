@@ -150,6 +150,10 @@ header {
         max-width: 595px;
     }
 
+    header {
+        margin-bottom: 10px;
+    }
+
     .container-header {
         flex-wrap: wrap;
     }
@@ -228,32 +232,21 @@ header {
     }
 }
 
-.container-header-searchbar {
-    width: 100%;
-    height: 100%;
-}
-
-.header-searchbar-form-holder {
-    height: 100%;
-}
-
 .main-search-form {
-    height: 100%;
+    border-radius: 5px;
     background-color: #ffffff;
 }
 
 .main-search-form-inner-wrapper {
     display: flex;
-    flex-grow: 1;
-    height: 100%;
-    border: solid black 1px;
+    border: solid #33535e 1px;
     border-radius: 5px;
 }
 
 .main-search-form-input-holder {
     width: 100%;
     min-width: 200px;
-    margin: 0 10px 0 10px;
+    margin: 0 10px 0 0;
     padding: 0 10px;
 }
 
@@ -263,6 +256,7 @@ header {
     border-style: none;
     outline: none;
     font-size: 16px;
+    background-color: #ffffff;
 }
 
 .main-search-form-button-holder {
@@ -275,33 +269,38 @@ header {
     font-size: 16px;
     border-style: none;
     border-radius: 5px;
-    background-color: #18a3dd;
+    background-color: #168efd;
     font-size: 18px;
     font-weight: 700;
     color: #3a3a3a;
 }
 
 .main-search-form-button:hover {
-    background-color: #0479e7;
+    background-color: #0076e4;
 }
 
 /* END MAIN SEARCHBAR */
 
-
 /* SEARCHBAR REGION BUTTON */
 
-.wrapper-header-top-searchbar-region-button {
+.wrapper-header-region-button {
     width: 200px;
     align-self: stretch;
 }
 
-.header-top-searchbar-region-button-holder {
-    border: solid 1px black;
+@media (max-width: 595px) {
+    .wrapper-header-region-button {
+        margin-left: 2px;
+    }
+}
+
+.container-header-region-button {
     height: 100%;
+    border: solid 1px #33535e;
     border-radius: 5px;
 }
 
-.header-top-searchbar-region-button {
+.header-region-button { /* the button */
     background-color: #ffffff;
     width: 100%;
     height: 100%;
@@ -316,11 +315,11 @@ header {
     padding: 3px;
 }
 
-.header-top-searchbar-region-button:hover {
+.header-region-button:hover {
     background-color: #ebf0f5ce;
 }
 
-.header-top-searchbar-region-button-value {
+.header-region-button-value {
     font-size: 16px;
 }
 

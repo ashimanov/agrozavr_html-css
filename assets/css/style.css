@@ -145,6 +145,11 @@ header {
 }
 
 @media (max-width: 595px) {
+
+    body, footer {
+        max-width: 595px;
+    }
+
     .container-header {
         flex-wrap: wrap;
     }
@@ -199,42 +204,53 @@ header {
 }
 
 @media (max-width: 470px) {
+
+    body, footer {
+        max-width: 470;
+    }
+
     .logo-text {
         flex-direction: column;
         align-items: flex-start;
     }
 }
 
-/* HEADER - SEARCHBAR */
+/* HEADER - MAIN SEARCHBAR */
 
 .wrapper-header-searchbar {
     width: 100%;
     margin: 0 10px;
 }
 
-.header-top-searchbar-container {
+@media (max-width: 595px) {
+    .wrapper-header-searchbar {
+        margin: 5px 0 5px 2px;
+    }
+}
+
+.container-header-searchbar {
     width: 100%;
     height: 100%;
 }
 
-.header-top-searchbar-container-form-holder {
+.header-searchbar-form-holder {
     height: 100%;
 }
 
 .main-search-form {
     height: 100%;
+    background-color: #ffffff;
 }
 
-.header-top-searchbar-form-inner-wrapper {
+.main-search-form-inner-wrapper {
     display: flex;
     flex-grow: 1;
     height: 100%;
     border: solid black 1px;
     border-radius: 5px;
-    background-color: #ffffff;
 }
 
-.header-top-searchbar-form-input-holder {
+.main-search-form-input-holder {
     width: 100%;
     min-width: 200px;
     margin: 0 10px 0 10px;
@@ -268,6 +284,11 @@ header {
 .main-search-form-button:hover {
     background-color: #0479e7;
 }
+
+/* END MAIN SEARCHBAR */
+
+
+/* SEARCHBAR REGION BUTTON */
 
 .wrapper-header-top-searchbar-region-button {
     width: 200px;

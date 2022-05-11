@@ -1,6 +1,6 @@
 *, *:before, *:after {
     box-sizing: border-box;
-    font-family: helvetica sans-serif;
+    font-family: "helvetica sans-serif";
     font-size: 12px;
     margin: 0;
     padding: 0;
@@ -216,7 +216,7 @@ header {
 @media (max-width: 470px) {
 
     body, footer {
-        max-width: 470;
+        max-width: 470px;
     }
 
     .logo-text {

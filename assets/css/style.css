@@ -658,7 +658,6 @@ header {
     font-weight: 700;
     color: #333;
     text-align: center;
-    max-width: 70%;
 }
 
 .spacer-narrow {
@@ -669,7 +668,7 @@ header {
     border: 3px solid #dcdee3;
     border-radius: 3px;
     flex: 1 1;
-    margin-left: 15px;
+    margin-left: 10px;
     vertical-align: baseline;
     overflow: hidden;
 }
@@ -696,7 +695,7 @@ header {
         border: 3px solid #dcdee3;
         border-radius: 3px;
         flex: 1 1;
-        margin-right: 15px;
+        margin-right: 10px;
         vertical-align: baseline;
         overflow: hidden;
     }

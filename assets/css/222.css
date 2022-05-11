@@ -1,0 +1,13 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: helvetica sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    color: #33535e;
+}
+
+body {
+    background-color: #efefef;
+}
+

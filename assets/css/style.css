@@ -339,6 +339,42 @@ header {
     border: 1px solid #DCDEE3;
 }
 
+@media (max-width: 628px) {
+    .wrapper-main-page-ad-block {
+        max-height: 340px;
+    }
+}
+
+@media (max-width: 550px) {
+    .wrapper-main-page-ad-block {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrapper-main-page-ad-block {
+        max-height: 273px;
+    }
+}
+
+@media (max-width: 450px) {
+    .wrapper-main-page-ad-block {
+        max-height: 248px;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper-main-page-ad-block {
+        max-height: 222px;
+    }
+}
+
+@media (max-width: 375px) {
+    .wrapper-main-page-ad-block {
+        max-height: 207px;
+    }
+}
+
 .container-main-page-ad-block {
     display: flex;
     padding: 10px;
@@ -347,6 +383,8 @@ header {
 .wrapper-slideout-categories {
     width: 20%;
     min-width: 200px;
+    border-right: 1px solid #efefef;
+    margin-right: 2px;
 }
 
 @media (max-width: 628px) {
@@ -484,12 +522,18 @@ header {
     max-height: 380px;
     overflow: hidden;
 }
-
+/* 
 @media (max-width: 628px) {
     .container-main-page-slider {
         min-height: 320px;
     }
 }
+
+@media (max-width: 550px) {
+    .container-main-page-slider {
+        min-height: 280px;
+    }
+} */
 
 .main-page-slider-navigation {
     display: inline-block;
@@ -564,6 +608,12 @@ header {
     bottom: 60%;
 }
 
+@media (max-width: 850px) {
+    .main-page-slider-controls {
+        bottom: 50%;
+    }
+}
+
 #mpsi1:checked ~ .main-page-slider-controls label:nth-child(4),
 #mpsi2:checked ~ .main-page-slider-controls label:nth-child(1),
 #mpsi3:checked ~ .main-page-slider-controls label:nth-child(2),
@@ -609,6 +659,10 @@ header {
     color: #333;
 }
 
+.spacer-narrow {
+    display: none;
+}
+
 .spacer {
     border: 3px solid #dcdee3;
     border-radius: 3px;
@@ -627,6 +681,23 @@ header {
     display: flex;
     background-color: #fff;
     border-radius: 10px;
+}
+
+@media (max-width: 892px) {
+    .main-page-category-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .spacer-narrow {
+        display: block;
+        border: 3px solid #dcdee3;
+        border-radius: 3px;
+        flex: 1 1;
+        margin-right: 15px;
+        vertical-align: baseline;
+        overflow: hidden;
+    }
 }
 
 .main-page-category-item_banner img {
@@ -652,7 +723,6 @@ header {
     border-radius: 0 10px 10px 0;
 }
 
-
 .subitem-div {
     display: flex;
     align-items: center;
@@ -668,8 +738,22 @@ header {
     font-weight: 700;
 }
 
-.mg-plus {
-    margin: 0 3px 0 auto;
+.subitem-name::after {
+    content: "+";
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.main-page-category_subitem-li:hover .subitem-name::after {
+    content: "-";
+    position: absolute;
+    top: -1px;
+    right: 10px;
+    font-size: 22px;
+    font-weight: 900;
 }
 
 .subitem-link {
@@ -677,9 +761,8 @@ header {
 }
 
 .subitem-div:hover {
-    top: -1px;
-    right: -1px;
     box-shadow: -2px 2px 2px #9f9f9f;
+    background-color: #e4e1dce3;
 }
 
 /* MAIN PAGE CATEGORY SUBITEMS slide-out menu */
@@ -689,6 +772,33 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
     grid-gap: 10px;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 892px) {
+    .main-page-category_subitem-ul {
+        justify-content: center;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    .show-label {
+        display: inline !important;
+    }
+
+    .hidden-checkbox:checked ~ .hidden {
+    display: block !important;
+    }
+
+    .hidden-checkbox:checked ~ .show-label {
+        display: none !important;
+    }
+
+    .hidden-checkbox:checked ~ .hide-label {
+        display: inline !important;
+    }
 }
 
 .main-page-category_subitem-li {
@@ -698,10 +808,45 @@ header {
     width: 100%;
 }
 
+.open-list {
+    list-style: none;
+}
+
+.show-label, .hide-label {
+    display: none;
+    justify-self: end;
+}
+
+.span-label {
+    border-bottom: 1px dotted black;
+}
+
+.show-label label, .hide-label label {
+    cursor: pointer;
+}
+
+.subitem-label::after {
+    content: "+";
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.main-page-category_subitem-li input:checked + .subitem-label::after {
+    content: "-";
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
 .main-page-category_subitem-li:hover .subitem-menu_container {
     display: block;
     box-shadow: 10px 5px 11px #21212133;
-    z-index: 15;
+    z-index: 3;
     
 }
 

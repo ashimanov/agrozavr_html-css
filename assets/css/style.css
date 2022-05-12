@@ -936,7 +936,7 @@ footer {
 .footer-contacts {
     margin: 25px 0 0 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(auto, 200px) 1fr 1fr;
     color: #fff;
     align-items: center;
 }
@@ -947,12 +947,12 @@ footer {
         align-items: center;
     }
 
-    .footer-contacts .footer_text:nth-child(3) {
+    .footer_text:nth-child(3) {
         grid-column: 2;
         grid-row: 2;
     }
 
-    .footer-contacts .footer_text:nth-child(1) {
+    .footer_text:nth-child(1) {
         grid-column: 1;
         grid-row: 1 / 3;
     }
